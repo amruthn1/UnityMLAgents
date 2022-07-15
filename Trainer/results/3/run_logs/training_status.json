@@ -1,0 +1,38 @@
+{
+    "Paddle": {
+        "checkpoints": [
+            {
+                "steps": 499984,
+                "file_path": "results\\3\\Paddle\\Paddle-499984.onnx",
+                "reward": -1.0,
+                "creation_time": 1657859279.6074977,
+                "auxillary_file_paths": [
+                    "results\\3\\Paddle\\Paddle-499984.pt"
+                ]
+            },
+            {
+                "steps": 500008,
+                "file_path": "results\\3\\Paddle\\Paddle-500008.onnx",
+                "reward": -1.0,
+                "creation_time": 1657859279.688182,
+                "auxillary_file_paths": [
+                    "results\\3\\Paddle\\Paddle-500008.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500008,
+            "file_path": "results\\3\\Paddle.onnx",
+            "reward": -1.0,
+            "creation_time": 1657859279.688182,
+            "auxillary_file_paths": [
+                "results\\3\\Paddle\\Paddle-500008.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.29.0.dev0",
+        "torch_version": "1.11.0+cu113"
+    }
+}
