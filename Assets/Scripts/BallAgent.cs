@@ -11,14 +11,10 @@ public class BallAgent : Agent
     EnvironmentParameters m_ResetParams;
     float xLimitMinPaddle = 1f;
     float xLimitMaxPaddle = 11f;
-    float yLimitMinBall = -10f;
-    float xLimitMaxBall = 8f;
-    float xLimitMinBall = -2.5f;
-    float zLimitBall = 1.77f;
     public void ResetBall()
     {
         Debug.Log("Resetting ball position");
-        m_ballRb.position = new Vector3(0f, 1f, -3.5f);
+        ball.transform.position = new Vector3(-6.52f, 3.7f, 1.39f);
     }
     void Update()
     {
@@ -35,6 +31,7 @@ public class BallAgent : Agent
     public override void CollectObservations(VectorSensor sensor)
     {
         sensor.AddObservation(ball.transform.position.x);
+        sensor.AddObservation(gameObject.transform.position.x);
     }
     public override void Initialize()
     {
@@ -61,7 +58,7 @@ public class BallAgent : Agent
     public void HitFloor() 
     {
         Debug.Log("End Episode");
-        AddReward(-2f);
+        AddReward(-1f);
         EndEpisode();
     }
     public override void OnEpisodeBegin()
@@ -69,11 +66,7 @@ public class BallAgent : Agent
         Debug.Log("New Episode");
         SetResetParameters();
     }
-    public void SetPaddle()
-    {
-    }
     public void SetResetParameters()
     {
-        SetPaddle();
     }
 }
